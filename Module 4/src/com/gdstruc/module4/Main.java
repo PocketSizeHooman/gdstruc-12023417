@@ -65,17 +65,14 @@ public class Main {
         // queue.printQueue();
 
         int game = 1;
-        int addedPlayers = 0;
 
         while(game <= 10)
         {
             int randNum = getRandomNumber(1,7);
-            int totalPlayers = addedPlayers + randNum;
 
             System.out.println("Players in Queue: " + randNum);
-            System.out.println("Total Players in Queue: " + totalPlayers);
 
-            if(totalPlayers >= 5)
+            if(randNum >= 5)
             {
                 System.out.println("Game Start! Game: " + game);
                 for (int i = 0; i < 5; i++) {
@@ -85,15 +82,15 @@ public class Main {
                 game++;
 
             }
-            else if(totalPlayers < 5)
+            else if(randNum < 5)
             {
                 System.out.println("Matchmaking...\n");
-                addedPlayers += randNum;
 
             }
 
             System.out.println("Press Any Key To Continue...");
             (new Scanner(System.in)).nextLine();
+
 
             if(game > 10)
             {
